@@ -2927,7 +2927,8 @@
                     "id",
                     "process_graph",
                     "status",
-                    "submitted"
+                    "submitted",
+                    "backend_version"
                   ],
                   "properties": {
                     "id": {
@@ -2979,6 +2980,16 @@
                     },
                     "budget": {
                       "$ref": "#/components/schemas/budget"
+                    },
+                    "backend_version" : {
+                      "type" : "string",
+                      "description" : "Version number of the back-end implementation during the execution of the job.",
+                      "example" : "1.1.2"
+                    },
+                    "input_data" : {
+                      "type" : "string",
+                      "description" : "Persistent identifier of the used input data, if data citation is provided by the backend.",
+                      "example" : "https://hdl.handle.net/20.500.11756/b73b7a18"
                     }
                   }
                 }
